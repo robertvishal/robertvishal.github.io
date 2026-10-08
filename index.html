@@ -1,93 +1,582 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Robert Vishal V G - Senior iOS Developer portfolio">
-<title>Robert Vishal V G | Senior iOS Developer</title>
-<style>
-:root{--bg:#f6f8fb;--card:#fff;--text:#172033;--muted:#647084;--blue:#1769e0;--line:#e5e9f0;--dark:#0d1628}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
-a{color:var(--blue);text-decoration:none}.nav{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-.navin{max-width:1120px;margin:auto;padding:14px 24px;display:flex;justify-content:space-between;align-items:center}.brand{font-weight:800}.links{display:flex;gap:22px;font-size:14px}
-.hero{background:linear-gradient(135deg,#0d1628,#183a72);color:#fff}.hero-in{max-width:1120px;margin:auto;padding:92px 24px 82px}.eyebrow{color:#9fc4ff;font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:13px}.hero h1{font-size:clamp(40px,6vw,70px);line-height:1.05;margin:12px 0 18px}.hero h2{font-size:24px;font-weight:500;margin:0 0 22px;color:#dce9ff}.hero p{max-width:780px;color:#d3def1;font-size:18px}.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{padding:11px 18px;border-radius:9px;border:1px solid #5f80ad;color:#fff;font-weight:700}.btn.primary{background:#fff;color:#173a72;border-color:#fff}
-section{max-width:1120px;margin:auto;padding:70px 24px}.section-title{font-size:32px;margin:0 0 10px}.section-sub{color:var(--muted);margin:0 0 30px}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:25px;box-shadow:0 5px 20px rgba(20,35,60,.04)}.card h3{margin:0 0 8px;font-size:21px}.meta{color:var(--muted);font-size:14px}.tags{display:flex;gap:7px;flex-wrap:wrap;margin:14px 0}.tag{background:#edf4ff;color:#24589e;padding:4px 9px;border-radius:20px;font-size:12px;font-weight:650}.project-link{display:inline-block;margin-top:5px;font-weight:700}
-.skills{display:flex;flex-wrap:wrap;gap:10px}.skill{background:#fff;border:1px solid var(--line);padding:9px 13px;border-radius:9px}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:30px}.stat{background:rgba(255,255,255,.09);padding:18px;border-radius:12px}.stat b{display:block;font-size:28px}.stat span{color:#c8d6ed;font-size:13px}
-footer{background:var(--dark);color:#c9d3e4;text-align:center;padding:34px 24px}footer a{color:#9fc4ff}
-@media(max-width:760px){.links{display:none}.grid{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.hero-in{padding-top:65px}}
-</style>
+<!-- saved from url=(0057)file:///Users/robertvishal/Downloads/portfolio_index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robert Vishal V G | Senior iOS Developer Portfolio</title>
+    <style>
+        :root {
+            --bg-primary: #0f172a;
+            --bg-secondary: #1e293b;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent: #38bdf8;
+            --accent-hover: #0ea5e9;
+            --card-bg: #1e293b;
+            --border: #334155;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--accent-hover);
+        }
+
+        header {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 4rem 2rem 2rem 2rem;
+            text-align: center;
+        }
+
+        .profile-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.025em;
+        }
+
+        .profile-subtitle {
+            font-size: 1.25rem;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .contact-row {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .whatsapp-tag {
+            color: var(--text-secondary);
+            padding: 0.1rem 0rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            margin-left: 0.25rem;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        section {
+            margin-bottom: 4rem;
+        }
+
+        h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 0.5rem;
+            letter-spacing: -0.025em;
+        }
+
+        .summary-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2rem;
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .metric-box {
+            background-color: rgba(56, 189, 248, 0.05);
+            border: 1px dashed var(--accent);
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .metric-num {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--accent);
+            margin-bottom: 0.25rem;
+        }
+
+        .metric-label {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent);
+        }
+
+        .project-img-wrapper {
+            width: 100%;
+            height: 180px;
+            background-color: #334155;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.7;
+        }
+
+        .project-placeholder-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-weight: 700;
+            color: white;
+            font-size: 1.25rem;
+            letter-spacing: 0.05em;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+            text-align: center;
+            width: 90%;
+        }
+
+        .project-content {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .project-title {
+            font-size: 1.35rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-desc {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            flex-grow: 1;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .tech-badge {
+            background-color: rgba(248, 250, 252, 0.05);
+            border: 1px solid var(--border);
+            color: var(--text-secondary);
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+        }
+
+        .project-link {
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .skill-pill {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border);
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.95rem;
+            transition: background-color 0.2s, border-color 0.2s;
+        }
+
+        .skill-pill:hover {
+            background-color: rgba(56, 189, 248, 0.1);
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .additional-section {
+            background-color: var(--bg-secondary);
+            border-radius: 12px;
+            padding: 2rem;
+            border: 1px solid var(--border);
+        }
+
+        .additional-list {
+            list-style-type: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .additional-item {
+            background: var(--bg-primary);
+            padding: 0.75rem 1rem;
+            border-radius: 6px;
+            border-edge: 1px solid var(--border);
+            font-size: 0.95rem;
+        }
+
+        footer {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+            text-align: center;
+            color: var(--text-secondary);
+            border-top: 1px solid var(--border);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            header { padding-top: 2rem; }
+            .profile-title { font-size: 2rem; }
+            .contact-row { flex-direction: column; gap: 0.25rem; }
+        }
+    </style>
 </head>
 <body>
-<nav class="nav"><div class="navin"><div class="brand">Robert Vishal V G</div><div class="links"><a href="#about">About</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div></div></nav>
 
-<header class="hero">
-<div class="hero-in">
-<div class="eyebrow">Senior iOS Developer</div>
-<h1>Building reliable, scalable mobile experiences.</h1>
-<h2>Swift · UIKit · SwiftUI · iOS · Mobile Architecture</h2>
-<p>iOS developer with 9 years of experience designing, developing and publishing mobile applications across OTT/Media, E-commerce, Healthcare, Fintech, Travel and Social Networking.</p>
-<div class="buttons">
-<a class="btn primary" href="#projects">View Projects</a>
-<a class="btn" href="https://linkedin.com/in/robertvishal" target="_blank">LinkedIn</a>
-</div>
-<div class="stats">
-<div class="stat"><b>9+</b><span>Years experience</span></div>
-<div class="stat"><b>15+</b><span>Apps developed</span></div>
-<div class="stat"><b>iOS</b><span>Core specialization</span></div>
-<div class="stat"><b>End-to-end</b><span>Development & publishing</span></div>
-</div>
-</div>
-</header>
+    <header>
+        <h1 class="profile-title">Robert Vishal V G</h1>
+        <div class="profile-subtitle">Senior iOS Developer</div>
+        <div class="contact-info">
+            <div class="contact-row">
+                <span><strong>Phone (KSA):</strong> +966 537804275</span>
+                <span><strong>Email:</strong> <a href="mailto:vishalmichael@gmail.com">vishalmichael@gmail.com</a></span>
+            </div>
+            <div class="contact-row" style="margin-top: 0.1rem;">
+                <span><strong>Phone (India):</strong> +91 9746082033 (Available on WhatsApp)</span>
+                <span><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/robertvishal" target="_blank">linkedin.com/in/robertvishal</a></span>
+            </div>
+        </div>
+    </header>
 
-<section id="about">
-<h2 class="section-title">About</h2>
-<p class="section-sub">Senior iOS development, technical leadership and end-to-end delivery.</p>
-<div class="card">
-<p>I work across the full mobile application lifecycle, from development and API integration through testing, TestFlight and App Store publishing. My experience includes leading teams, mentoring developers, performing code reviews, project execution and building applications for multiple Apple platforms.</p>
-</div>
-</section>
+    <main>
+        <section id="summary">
+            <h2>Professional Summary</h2>
+            <div class="summary-card">
+                <p>iOS Developer with 9 years of experience designing, developing, and publishing native mobile applications across diverse domains like E-commerce, OTT/Media, Healthcare, and Fintech. Expert in Swift, UIKit, SwiftUI, and scalable architectures including MVVM and Clean Architecture. Proven track record of leading Agile teams, optimizing app performance, and reducing crash rates. Proficient in managing cross-platform components via Flutter and driving end-to-end CI/CD deployment pipelines.</p>
+                
+                <div class="metrics-grid">
+                    <div class="metric-box">
+                        <div class="metric-num">9+</div>
+                        <div class="metric-label">Years Experience</div>
+                    </div>
+                    <div class="metric-box">
+                        <div class="metric-num">15+</div>
+                        <div class="metric-label">Apps Developed</div>
+                    </div>
+                    <div class="metric-box">
+                        <div class="metric-num">iOS</div>
+                        <div class="metric-label">Core Specialization</div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<section id="projects">
-<h2 class="section-title">Featured Projects</h2>
-<p class="section-sub">Selected applications with publicly available App Store evidence.</p>
-<div class="grid">
-<article class="card"><h3>Telenet TV</h3><div class="meta">European Entertainment Client · OTT / Streaming</div><p>Multi-platform streaming application supporting iOS, tvOS, Android, Android TV and Fire TV. Worked on leadership, code reviews, Forensic Watermarking, Universal Links, Crashlytics and Flutter/native integration.</p><div class="tags"><span class="tag">Swift</span><span class="tag">Flutter</span><span class="tag">tvOS</span><span class="tag">Firebase</span><span class="tag">Forensic Watermarking</span></div><a class="project-link" href="https://apps.apple.com/be/app/telenet-tv/id1360986914" target="_blank">View on App Store →</a></article>
+        <section id="projects">
+            <h2>Featured Projects</h2>
+            <div class="projects-grid">
+                
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <img class="project-img" src="./index_files/josco.png" alt="Jewellery App">
+                        <div class="project-placeholder-text">Josco</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Jewellery App</h3>
+                        <p class="project-desc">Josco is a jewellery application where the users can see, book, purchase Jewells.</p>
+                        <div class="tech-stack">
+                            <span class="tech-badge">Swift</span>
+                            
+                            <span class="tech-badge">Payment Gateway</span>
+                            <span class="tech-badge">REST API</span>
+                            
+                        </div>
+                        <a href="https://apps.apple.com/in/app/josco/id1583263572" target="_blank" class="project-link">View on App Store ↗</a>
+                    </div>
+                <!-- Project 2 --></div><div class="project-card">
+                    <div class="project-img-wrapper">
+                        <img class="project-img" src="./index_files/telenet-tv.png" alt="European Entertainment Client">
+                        <div class="project-placeholder-text">Telenet TV</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">European Entertainment Client</h3>
+                        <p class="project-desc">Developed a multi-platform OTT streaming application enabling seamless online video streaming and playback across Android, iOS, Apple TV, Android TV, and Fire TV devices. Led team, performed code reviews, and implemented forensic watermarking.</p>
+                        <div class="tech-stack">
+                            <span class="tech-badge">Swift</span>
+                            <span class="tech-badge">Flutter</span>
+                            <span class="tech-badge">Dart</span>
+                            <span class="tech-badge">tvOS</span>
+                            <span class="tech-badge">Xcode</span>
+                        </div>
+                        <a href="https://apps.apple.com/be/app/telenet-tv/id1360986914" target="_blank" class="project-link">View on App Store ↗</a>
+                    </div>
+                </div>
 
-<article class="card"><h3>Solo Secure</h3><div class="meta">Personal Safety</div><p>Personal safety application involving biometric authentication, Google Maps, location tracking, APNs, background tasks, modularization, Hasura and REST APIs.</p><div class="tags"><span class="tag">Swift</span><span class="tag">CoreLocation</span><span class="tag">GraphQL</span><span class="tag">APNs</span><span class="tag">Maps</span></div><a class="project-link" href="https://apps.apple.com/us/app/solo-secure-gosolo/id1608031526" target="_blank">View on App Store →</a></article>
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <img class="project-img" src="./index_files/solo-secure.png" alt="Personal Safety App">
+                        <div class="project-placeholder-text">Solo Secure</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Personal Safety App</h3>
+                        <p class="project-desc">Provides an automated, comprehensive approach to personal safety. Implemented Biometric Authentication, Google Maps, Location Tracking, APNS, Background Tasks, Modularisation, and Graph QL.</p>
+                        <div class="tech-stack">
+                            <span class="tech-badge">Swift</span>
+                            <span class="tech-badge">CoreLocation</span>
+                            <span class="tech-badge">GraphQL</span>
+                            <span class="tech-badge">BLE</span>
+                            <span class="tech-badge">APNS</span>
+                        </div>
+                        <a href="https://apps.apple.com/us/app/solo-secure-gosolo/id1608031526" target="_blank" class="project-link">View on App Store ↗</a>
+                    </div>
+                </div>
 
-<article class="card"><h3>Nuper</h3><div class="meta">Taxi Booking / Navigation</div><p>Real-time taxi booking application with driver tracking, route drawing, SocketIO, localization and REST API integration. Also involved in testing, TestFlight and App Store publishing.</p><div class="tags"><span class="tag">Swift</span><span class="tag">MapBox</span><span class="tag">SocketIO</span><span class="tag">REST API</span></div><a class="project-link" href="https://apps.apple.com/us/app/nuper/id1499039493" target="_blank">View on App Store →</a></article>
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <img class="project-img" src="./index_files/nuper.png" alt="Nuper Taxi Booking">
+                        <div class="project-placeholder-text">Nuper</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Nuper</h3>
+                        <p class="project-desc">Online Taxi booking with real-time Navigation App, enabling users to book rides, track drivers in real time, and make secure online payments via MapBox and SocketIO integration.</p>
+                        <div class="tech-stack">
+                            <span class="tech-badge">Swift</span>
+                            <span class="tech-badge">MapBox</span>
+                            <span class="tech-badge">SocketIO</span>
+                            <span class="tech-badge">Firebase</span>
+                            <span class="tech-badge">REST API</span>
+                        </div>
+                        <a href="https://apps.apple.com/us/app/nuper/id1499039493" target="_blank" class="project-link">View on App Store ↗</a>
+                    </div>
+                </div>
 
-<article class="card"><h3>Sparrow</h3><div class="meta">Fintech / Trading</div><p>Options trading platform with UI development, unit testing, TestFlight deployment and App Store submission. Integrated charts, WebSocket, biometrics, Universal Links and reCAPTCHA.</p><div class="tags"><span class="tag">Swift</span><span class="tag">WebSocket</span><span class="tag">Biometrics</span><span class="tag">reCAPTCHA</span></div><a class="project-link" href="https://apps.apple.com/in/app/sparrow-trade-bitcoin-options/id1513285139" target="_blank">View on App Store →</a></article>
+                <!-- Project 5 -->
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <img class="project-img" src="./index_files/sparrow.png" alt="Sparrow Options Trading">
+                        <div class="project-placeholder-text">Sparrow</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Sparrow</h3>
+                        <p class="project-desc">A leading options trading platform providing the simplest way to control risk and monetise digital assets. Integrated ChartView, WebSocket, biometrics, and Universal Links.</p>
+                        <div class="tech-stack">
+                            <span class="tech-badge">Swift</span>
+                            <span class="tech-badge">WebSocket</span>
+                            <span class="tech-badge">ChartView</span>
+                            <span class="tech-badge">Biometrics</span>
+                        </div>
+                        <a href="https://apps.apple.com/in/app/sparrow-trade-bitcoin-options/id1513285139" target="_blank" class="project-link">View on App Store ↗</a>
+                    </div>
+                </div>
 
-<article class="card"><h3>Popular Vehicles</h3><div class="meta">Automotive / Services</div><p>Automotive services platform covering vehicle purchasing, servicing, insurance renewals and accessories. Worked on design, development, REST APIs, data modelling, testing and App Store publishing.</p><div class="tags"><span class="tag">Swift</span><span class="tag">WebKit</span><span class="tag">REST API</span><span class="tag">Unit Testing</span></div><a class="project-link" href="https://apps.apple.com/us/app/my-popular-vehicles/id1453987246" target="_blank">View on App Store →</a></article>
+                <!-- Project 6 -->
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <img class="project-img" src="./index_files/popular-vehicles.png" alt="Popular Vehicles Platform">
+                        <div class="project-placeholder-text">My Popular Vehicles</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Popular-vehicles-and-services</h3>
+                        <p class="project-desc">Automotive services platform streamlining vehicle purchasing, Maruti servicing, insurance renewals, and accessory shopping workflows smoothly.</p>
+                        <div class="tech-stack">
+                            <span class="tech-badge">Swift</span>
+                            <span class="tech-badge">WebKit</span>
+                            <span class="tech-badge">CocoaPods</span>
+                            <span class="tech-badge">REST API</span>
+                        </div>
+                        <a href="https://apps.apple.com/us/app/my-popular-vehicles/id1453987246?ls=1" target="_blank" class="project-link">View on App Store ↗</a>
+                    </div>
+                </div>
 
-<article class="card"><h3>Koloxo Homes</h3><div class="meta">Real Estate / E-commerce</div><p>Property platform for buying, selling and renting directly from owners, including property search, map view, chat, shortlisting and ratings.</p><div class="tags"><span class="tag">Swift</span><span class="tag">Maps</span><span class="tag">REST API</span><span class="tag">WebKit</span></div><a class="project-link" href="https://apps.apple.com/in/app/koloxo-home/id1460128461" target="_blank">View on App Store →</a></article>
+                <!-- Project 7 -->
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <img class="project-img" src="./index_files/koloxo-homes.png" alt="Koloxo Homes Real Estate">
+                        <div class="project-placeholder-text">Koloxo Home</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Koloxo Homes | E-commerce App</h3>
+                        <p class="project-desc">Global property platform enabling users to buy, sell, and rent properties directly from owners with features like map view, instant chat, shortlisting, and live ratings.</p>
+                        <div class="tech-stack">
+                            <span class="tech-badge">Swift</span>
+                            <span class="tech-badge">Maps &amp; Markers</span>
+                            <span class="tech-badge">WebKit</span>
+                            <span class="tech-badge">REST API</span>
+                        </div>
+                        <a href="https://apps.apple.com/in/app/koloxo-home/id1460128461" target="_blank" class="project-link">View on App Store ↗</a>
+                    </div>
+                </div>
 
-<article class="card"><h3>E-Expo</h3><div class="meta">E-commerce</div><p>E-commerce platform with separate customer, seller and delivery applications, supporting exhibition-based shopping and operational workflows.</p><div class="tags"><span class="tag">Swift</span><span class="tag">REST API</span><span class="tag">Localization</span><span class="tag">Data Modelling</span></div><a class="project-link" href="https://apps.apple.com/app/apple-store/id1472052463" target="_blank">View on App Store →</a></article>
+                <!-- Project 8 -->
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <img class="project-img" src="./index_files/e-expo.png" alt="E-Expo E-commerce">
+                        <div class="project-placeholder-text">E-Expo</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">E-Expo | E-commerce App</h3>
+                        <p class="project-desc">E-commerce platform designed for startups and enterprises with separate apps for customers, sellers, and delivery teams, supporting exhibition shopping ecosystem handles.</p>
+                        <div class="tech-stack">
+                            <span class="tech-badge">Swift</span>
+                            <span class="tech-badge">Localisation</span>
+                            <span class="tech-badge">Data Modelling</span>
+                            <span class="tech-badge">REST API</span>
+                        </div>
+                        <a href="https://apps.apple.com/app/apple-store/id1472052463" target="_blank" class="project-link">View on App Store ↗</a>
+                    </div>
+                </div>
 
-<article class="card"><h3>PropertyExpo 2.0</h3><div class="meta">Real Estate / E-commerce</div><p>Real estate application for searching properties by location and supporting buying, selling and renting workflows.</p><div class="tags"><span class="tag">Swift</span><span class="tag">Maps</span><span class="tag">WebKit</span><span class="tag">REST API</span></div><a class="project-link" href="https://itunes.apple.com/us/app/propertyexpo/id1236718529?ls=1&mt=8" target="_blank">View on App Store →</a></article>
-</div>
-</section>
+                <!-- Project 9 -->
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <img class="project-img" src="./index_files/property-expo.png" alt="PropertyExpo 2.0">
+                        <div class="project-placeholder-text">PropertyExpo 2.0</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">PropertyExpo 2.0 | E-commerce App</h3>
+                        <p class="project-desc">Real estate centric e-commerce application focusing on map location queries, enabling comprehensive buying, selling, or renting options globally.</p>
+                        <div class="tech-stack">
+                            <span class="tech-badge">Swift</span>
+                            <span class="tech-badge">WebKit</span>
+                            <span class="tech-badge">Maps</span>
+                            <span class="tech-badge">REST API</span>
+                        </div>
+                        <a href="https://itunes.apple.com/us/app/propertyexpo/id1236718529?ls=1&amp;mt=8" target="_blank" class="project-link">View on App Store ↗</a>
+                    </div>
+                </div>
 
-<section id="skills">
-<h2 class="section-title">Technical Skills</h2>
-<p class="section-sub">Core technologies represented in the portfolio.</p>
-<div class="skills">
-<span class="skill">Swift</span><span class="skill">UIKit</span><span class="skill">SwiftUI</span><span class="skill">Flutter</span><span class="skill">Dart</span><span class="skill">MVVM</span><span class="skill">Clean Architecture</span><span class="skill">CocoaPods</span><span class="skill">GraphQL</span><span class="skill">REST APIs</span><span class="skill">Firebase</span><span class="skill">Crashlytics</span><span class="skill">MapBox</span><span class="skill">Google Maps</span><span class="skill">SocketIO</span><span class="skill">WebSocket</span><span class="skill">APNs</span><span class="skill">CoreLocation</span><span class="skill">Unit Testing</span><span class="skill">TestFlight</span><span class="skill">App Store Publishing</span>
-</div>
-</section>
+                <!-- Project 10 -->
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <img class="project-img" src="./index_files/avert.png" alt="Avert GIC App">
+                        <div class="project-placeholder-text">Avert Real-time GIC</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Avert</h3>
+                        <p class="project-desc">Real-time hazard app showing up-to-date conditions for Geomagnetically Induced Currents (GICs) across the US, built via clean visual charts and mapping maps tools.</p>
+                        <div class="tech-stack">
+                            <span class="tech-badge">Swift</span>
+                            <span class="tech-badge">GoogleMap</span>
+                            <span class="tech-badge">Charts</span>
+                            <span class="tech-badge">WebKit</span>
+                        </div>
+                        <span class="project-link" style="color:var(--text-secondary)">App Store Link Archived</span>
+                    </div>
+                </div>
 
-<section id="contact">
-<h2 class="section-title">Contact</h2>
-<p class="section-sub">Open to Senior iOS Developer and Technical Lead opportunities.</p>
-<div class="card">
-<p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/robertvishal" target="_blank">linkedin.com/in/robertvishal</a></p>
-<p><strong>Email:</strong> <a href="mailto:vishalmichael@gmail.com">vishalmichael@gmail.com</a></p>
-<p><strong>Phone:</strong> +966 537804275</p>
-</div>
-</section>
+            </div>
+        </section>
 
-<footer>© 2026 Robert Vishal V G · Senior iOS Developer</footer>
-</body>
-</html>
+        <section id="skills">
+            <h2>Technical Skills &amp; Expertise</h2>
+            <div class="skills-container">
+                <div class="skill-pill">Swift</div>
+                <div class="skill-pill">UIKit</div>
+                <div class="skill-pill">SwiftUI</div>
+                <div class="skill-pill">Flutter &amp; Dart</div>
+                <div class="skill-pill">MVVM &amp; Clean Architecture</div>
+                <div class="skill-pill">CocoaPods &amp; SPM</div>
+                <div class="skill-pill">GraphQL &amp; REST APIs</div>
+                <div class="skill-pill">Firebase Crashlytics</div>
+                <div class="skill-pill">Maps - MapBox &amp; Google Maps</div>
+                <div class="skill-pill">SocketIO &amp; WebSocket</div>
+                <div class="skill-pill">Push Notifcations - APNs &amp; FireBase</div>
+                <div class="skill-pill">Unit Testing (TDD)</div>
+                <div class="skill-pill">TestFlight &amp; App Store Publishing</div>
+                <div class="skill-pill">Agile &amp; Scrum</div>
+                <div class="skill-pill">CI/CD Deployment</div>
+            </div>
+        </section>
+
+        <section id="additional" class="additional-section">
+            <h2>Additional Project Contributions</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 1rem;">Collaborated within production agile squads across Healthcare, Food Ordering, Logistics and Social Networking domains:</p>
+            <div class="additional-list">
+                <div class="additional-item">🔹 Omron (Healthcare)</div>
+                <div class="additional-item">🔹 EzyProcure (Procurement/Food)</div>
+                <div class="additional-item">🔹 FROPC</div>
+                <div class="additional-item">🔹 Exhibiz</div>
+                <div class="additional-item">🔹 iResponse</div>
+                <div class="additional-item">🔹 Social Parrot (Social Network)</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Robert Vishal V G · Senior iOS Developer · Built for GitHub Pages</p>
+    </footer>
+
+
+
+
+</body></html>
